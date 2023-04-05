@@ -5,8 +5,8 @@ const App = () => {
     <div className='app'>
       <div  className='cash'> Cash </div>
       <div className='jumbotron' style={{ display: 'flex' }} >
-        <button className='btn btn-primary'> Recharge</button>
-        <button className='btn btn-primary'> Withdraw from account</button>
+        <button className='btn btn-primary'> Add money </button>
+        <button className='btn btn-primary'> Get money </button>
         <button className='btn btn-primary'> Add Customer </button>
       </div>
       <div className='customers'>
