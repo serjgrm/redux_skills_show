@@ -1,6 +1,7 @@
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import {createStore} from 'redux';
+import { Provider  } from 'react-redux';
 const defaultState = {
     cash:0
 }
@@ -16,8 +17,9 @@ function reducer (state=defaultState,action){
 }
 const store = createStore(reducer)
 store.dispatch({type:'ADD_CASH',payload:10})
-console.log(store.getState())
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <App/>
+    <Provider store={store}>
+        <App/>
+    </Provider>
 );
