@@ -1,0 +1,9 @@
+button{
+    margin: 5px
+}
+.cash,.customers,.jumbotron{
+    display: flex;
+    margin: 0 auto;
+    font-size: 40px;
+    justify-content: center;
+}
