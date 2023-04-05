@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css'
 import { useSelector, useDispatch } from 'react-redux';
 import { addCustomerAction, removeCustomerAction } from './store/customerReducer';
+import { fetchCustomers } from './asyncActions/customers';
 const App = () => {
   const cash = useSelector(state => state.cash.cash);
   const customers = useSelector(state => state.customers.customers);
@@ -29,6 +30,7 @@ const App = () => {
         <button onClick={()=>addCash(+prompt())} className='btn btn-primary'> Add money </button>
         <button onClick={()=>getCash(+prompt())} className='btn btn-primary'> Get money </button>
         <button onClick={()=>addCustomer(prompt())} className='btn btn-primary'> Add Customer </button>
+        <button onClick={()=> dispatch(fetchCustomers())} className='btn btn-primary'> Get customers from data base </button>
       </div>
       <div className='customers'>
         {
